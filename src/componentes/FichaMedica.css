@@ -1,0 +1,123 @@
+/* Contenedor principal anclado a la derecha */
+.ficha-panel-derecho {
+    width: 350px; /* Más ancho que un menú normal para acomodar texto largo */
+    height: 100vh;
+    background-color: #ffffff; 
+    color: #171a20;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0; /* Anclado a la derecha */
+    top: 0;
+    padding: 30px 25px;
+    border-left: 1px solid #d0d1d2; /* Borde del lado izquierdo */
+    z-index: 100;
+    overflow-y: auto; /* Permite hacer scroll si hay muchos datos */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.03); /* Sombra sutil para despegarlo del fondo */
+}
+
+/* Encabezado de la ficha */
+.ficha-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.ficha-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #171a20;
+    margin-bottom: 5px;
+}
+
+.ficha-header p {
+    font-size: 0.85rem;
+    color: #5c5e62;
+}
+
+/* Envoltorio y Secciones */
+.ficha-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Separación entre bloques de información */
+}
+
+.ficha-section {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    color: #393c41;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Rejilla adaptada para un panel estrecho (1 sola columna) */
+.data-grid-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Diseño de cada dato individual */
+.data-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Fondo muy suave para contrastar con el panel blanco */
+    border-radius: 6px;
+}
+
+.data-item span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8e8e93; /* Gris más claro para la etiqueta */
+    font-weight: 700;
+}
+
+.data-item strong {
+    font-size: 0.95rem;
+    color: #171a20;
+    font-weight: 500;
+    word-wrap: break-word; /* Evita que direcciones largas rompan el diseño */
+}
+
+/* Colores de estado (Estilo Tesla) */
+.data-item.highlight {
+    background-color: #f0f4ff; /* Fondo azul clarito */
+    border-left: 3px solid #3e6ae1;
+}
+
+.data-item.highlight strong {
+    color: #3e6ae1;
+    font-weight: 600;
+}
+
+.data-item.alert {
+    background-color: #fff5f5; /* Fondo rojo clarito */
+    border-left: 3px solid #cc0000;
+}
+
+.data-item.alert strong {
+    color: #cc0000;
+    font-weight: 600;
+}
+
+/* Personalizar la barra de scroll para que se vea moderna */
+.ficha-panel-derecho::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ficha-panel-derecho::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ficha-panel-derecho::-webkit-scrollbar-thumb {
+    background: #d0d1d2;
+    border-radius: 10px;
+}

@@ -1,0 +1,128 @@
+/* CONTENEDOR PRINCIPAL */
+.menu-container {
+  display: flex;
+  background-color: #ffffff; /* Fondo blanco puro Tesla */
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* ÁREA DE CONTENIDO (DERECHA) */
+.content {
+  margin-left: 280px; /* Espacio fijo para la BarraLateral */
+  width: calc(100% - 280px); /* Ocupa todo el resto de la pantalla */
+  padding: 60px 80px; /* Espaciado interno generoso */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea todo a la izquierda */
+  background-color: #ffffff;
+}
+
+/* ENCABEZADO */
+.content-header {
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.content-header h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #171a20;
+  margin-bottom: 10px;
+}
+
+.content-header p {
+  font-size: 1.1rem;
+  color: #5c5e62;
+}
+
+/* ENVOLTORIO DE LA FICHA (ANCHO COMPLETO) */
+.ficha-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Espacio entre secciones */
+}
+
+/* SECCIONES (Identificación, Perfil Clínico, etc.) */
+.ficha-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #171a20;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee; /* Línea que cruza toda la pantalla */
+  width: 100%;
+}
+
+/* REJILLA DE DATOS (EL MOTOR DEL DISEÑO) */
+.data-grid {
+  display: grid;
+  /* Crea columnas automáticamente según el ancho de la pantalla */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px 60px; /* Espacio entre items (Vertical Horizontal) */
+  width: 100%;
+}
+
+/* CADA BLOQUE DE INFORMACIÓN */
+.data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Etiqueta (Ej: TIPO DE SANGRE) */
+.data-item span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #5c5e62;
+}
+
+/* Valor (Ej: O+) */
+.data-item strong {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #171a20;
+}
+
+/* ESTADOS ESPECIALES */
+.data-item.highlight strong {
+  color: #3e6ae1; /* Azul Tesla */
+  font-weight: 600;
+}
+
+.data-item.alert strong {
+  color: #cc0000; /* Rojo para Alergias */
+  font-weight: 600;
+}
+
+/* RESPONSIVO PARA MÓVILES */
+@media (max-width: 1024px) {
+  .content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Ocultar sidebar en móviles o hacerla colapsable */
+  }
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .data-grid {
+    grid-template-columns: 1fr; /* Una sola columna en teléfonos */
+  }
+  .content-header h1 {
+    font-size: 2rem;
+  }
+}

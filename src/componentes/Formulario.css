@@ -1,0 +1,120 @@
+
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    /* (Manejamos el fondo desde JS como acordamos) */
+}
+
+/* CAJA DE CONTENIDO (Se mantiene igual) */
+.login-box {
+    width: 100%;
+    max-width: 380px; /* Ancho elegante para el formulario */
+    padding: 40px;
+    text-align: center; /* Asegura el centrado de los títulos */
+    color: white;
+}
+
+/* LOGO Y TÍTULO (Se mantiene igual) */
+.logo-tesla-mini {
+    letter-spacing: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.login-box h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* CENTRADO TOTAL DE LOS INPUT GROUPS */
+    width: 100%;
+}
+
+/* GRUPO DE INPUT (Aquí está la corrección) */
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%; /* El grupo ocupa todo el ancho de la caja de contenido */
+    max-width: 320px; /* Ancho máximo para las líneas de entrada */
+}
+
+/* INPUT ESTILO MINIMALISTA */
+.input-group input {
+    width: 100%; /* La línea de entrada se estira a todo el ancho del grupo */
+    padding: 12px 0;
+    font-size: 1.1rem;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Línea de entrada sutil */
+    outline: none;
+    text-align: center; /* CENTRA EL TEXTO QUE ESCRIBE EL USUARIO */
+    transition: all 0.3s ease;
+}
+
+
+.input-group label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%; /* La etiqueta ocupa todo el ancho del contenedor */
+    text-align: center; /* CENTRA EL TEXTO DENTRO DEL CONTENEDOR */
+    
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    font-size: 0.75rem;
+    color: #ffffff;
+    letter-spacing: 1.2px;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #ffffff;
+}
+
+
+.btn-tesla {
+    width: 100%;
+    max-width: 320px; 
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-tesla:hover {
+    background: #ffffff;
+    color: #171a20;
+    transform: translateY(-2px);
+}
+
+.error-msg {
+    margin-top: 25px;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+}

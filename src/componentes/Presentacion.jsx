@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const SysMedHero = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const SysMedHero = ({ irALogin }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
     "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1500", 
@@ -40,7 +40,7 @@ const SysMedHero = () => {
         </div>
         <div className="nav-links">
           <span>Soporte</span>
-          <span>Cuenta</span>
+          <span onClick={irALogin} style={{ cursor: 'pointer' }}>Cuenta</span>
         </div>
       </nav>
 
@@ -50,7 +50,7 @@ const SysMedHero = () => {
       </div>
 
       <div className="footer-buttons">
-        <button className="btn btn-primary">Registrar Ahora</button>
+        <button className="btn btn-primary" onClick={irALogin}>Registrar Ahora</button>
         <button className="btn btn-secondary">Prueba de diagnóstico</button>
       </div>
 

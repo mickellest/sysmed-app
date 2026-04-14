@@ -6,7 +6,7 @@ export function Formulario({ irAMenu }) {
     const [contrasena, setContrasena] = useState("");
     const [error, setError] = useState(false);
 
-    const fondoPantalla = "https://clinicadentalsonrie.cl/wp-content/uploads/2016/04/clinica-dental-sonrie-barros-errazurriz.jpg";
+    const fondoPantalla = "https://static.wikia.nocookie.net/heroess/images/3/3f/Dr._Mario_SSBU.png/revision/latest/scale-to-width-down/1200?cb=20181014004715&path-prefix=es";
 
     const estiloFondo = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${fondoPantalla})`,

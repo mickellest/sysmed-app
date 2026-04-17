@@ -39,7 +39,7 @@ export function BarraLateral({ vistaActiva, setVistaActiva }) {
                 </ul>
             </nav>
             <div className="sidebar-footer">
-                <button className="btn-logout">Salir</button>
+                <button className="btn-logout" onClick={() => window.location.reload()}>Salir</button>
             </div>
         </aside>
     )

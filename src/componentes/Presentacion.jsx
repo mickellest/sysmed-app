@@ -5,8 +5,8 @@ const SysMedHero = ({ irALogin }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1500", 
-    "https://images.unsplash.com/photo-1551076805-e18690c5e561?auto=format&fit=crop&q=80&w=1500",
+    "https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?auto=compress&cs=tinysrgb&w=1600", 
+    "https://images.pexels.com/photos/3845126/pexels-photo-3845126.jpeg?auto=compress&cs=tinysrgb&w=1600",
   ];
 
   useEffect(() => {

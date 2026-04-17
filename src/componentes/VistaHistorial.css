@@ -1,0 +1,60 @@
+.historial-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #eeeeee;
+  margin-top: 20px;
+}
+
+.tabs-indicadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f5f5f7;
+  padding-bottom: 15px;
+}
+
+.tab-btn {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #5c5e62;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background: #f0f4ff;
+  border-color: #bbcfff;
+  color: #3e6ae1;
+}
+
+.tab-btn.active {
+  background: #3e6ae1;
+  color: white;
+  border-color: #3e6ae1;
+  box-shadow: 0 4px 10px rgba(62,106,225,0.3);
+}
+
+.chart-wrapper {
+  background: #fafafc;
+  border-radius: 8px;
+  padding: 20px 10px;
+  border: 1px dashed #d1d5db;
+}
+
+.chart-title {
+  text-align: center;
+  color: #171a20;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  text-align: center;
+  color: #8E8E93;
+  padding: 40px;
+}

@@ -7,6 +7,12 @@ export function BarraLateral({ vistaActiva, setVistaActiva }) {
             <nav className="sidebar-nav">
                 <ul>
                     <li 
+                        className={vistaActiva === 'inicio' ? 'active' : ''} 
+                        onClick={() => setVistaActiva('inicio')}
+                    >
+                        Inicio
+                    </li>
+                    <li 
                         className={vistaActiva === 'perfil' ? 'active' : ''} 
                         onClick={() => setVistaActiva('perfil')}
                     >
@@ -22,7 +28,13 @@ export function BarraLateral({ vistaActiva, setVistaActiva }) {
                         className={vistaActiva === 'examenes' ? 'active' : ''} 
                         onClick={() => setVistaActiva('examenes')}
                     >
-                        Exámenes
+                        Escáner OCR
+                    </li>
+                    <li 
+                        className={vistaActiva === 'historial' ? 'active' : ''} 
+                        onClick={() => setVistaActiva('historial')}
+                    >
+                        Historial
                     </li>
                 </ul>
             </nav>

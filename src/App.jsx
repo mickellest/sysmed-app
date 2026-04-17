@@ -6,16 +6,21 @@ import './App.css';
 
 function App() {
   const [pantalla, setPantalla] = useState("presentacion");
+  const [userCredentials, setUserCredentials] = useState({ nombre: "", contrasena: "" });
+
   return (
     <div>
       {pantalla === "presentacion" && (
         <SysMedHero irALogin={() => setPantalla("login")} />
       )}
       {pantalla === "login" && (
-        <Formulario irAMenu={() => setPantalla("menu")} />
+        <Formulario 
+          irAMenu={() => setPantalla("menu")} 
+          setUserCredentials={setUserCredentials} 
+        />
       )}
       {pantalla === "menu" && (
-        <Menu />
+        <Menu userCredentials={userCredentials} />
       )}
     </div>
   )

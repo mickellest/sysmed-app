@@ -41,13 +41,13 @@ export function Menu({ userCredentials }) {
            .from('perfiles')
            .select('nombre_completo')
            .eq('id', userCredentials.id)
-           .single();
+           .maybeSingle();
 
         const { data, error } = await supabase
           .from('fichas_medicas')
           .select('*')
           .eq('paciente_id', userCredentials.id)
-          .single();
+          .maybeSingle();
 
         if (error && error.code !== 'PGRST116') {
              console.error("Error cargando ficha:", error);

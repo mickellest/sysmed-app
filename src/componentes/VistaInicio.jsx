@@ -15,7 +15,7 @@ export function VistaInicio({ userCredentials, setVistaActiva }) {
           .from('perfiles')
           .select('nombre_completo')
           .eq('id', userCredentials.id)
-          .single();
+          .maybeSingle();
         
         if (profile?.nombre_completo) {
           setUserName(profile.nombre_completo.split(" ")[0]); // Solo el primer nombre
